@@ -1,0 +1,27 @@
+{
+  "name" : "Encounter1 Encounter Cancellation",
+  "uuid" : "66f8b267-7997-4acf-8f45-7cc54266eed4",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ {
+    "uuid" : "ced248d8-53d2-4c8c-ba44-22ff1a4e7003",
+    "name" : "Encounter1 cancellation FEG",
+    "displayOrder" : 1.0,
+    "display" : "Encounter1 cancellation FEG",
+    "formElements" : [ {
+      "name" : "Encounter1 cancellation reason",
+      "uuid" : "268790f6-9f68-4f98-918f-8caeacc44eb4",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Encounter1 cancellation reason",
+        "uuid" : "c34517ae-1f4f-404e-b2f1-9713ce1595aa"
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ]
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : ""
+}

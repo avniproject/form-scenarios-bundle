@@ -1,0 +1,69 @@
+{
+  "name" : "Individual Registration",
+  "uuid" : "ef520d30-590d-49bc-93e1-7fa373f9c96e",
+  "formType" : "IndividualProfile",
+  "formElementGroups" : [ {
+    "uuid" : "fc580a7d-78e3-4b4b-83e7-8a8d2df60bba",
+    "name" : "Modify Encounter",
+    "displayOrder" : 1.0,
+    "display" : "Modify Encounter",
+    "formElements" : [ {
+      "name" : "Modify Encounter1",
+      "uuid" : "cdf7d2dc-4fc2-4404-b45c-d10a762f817c",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Modify encounter1",
+        "uuid" : "b1fc930a-cf49-44f5-a8cd-55a1d1f86659"
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Schedule Visits",
+      "uuid" : "e7b0f0cf-d4c5-4293-af26-7eb19a092022",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Schedule Visits",
+        "uuid" : "1b92cf91-30a6-4ff3-902f-4001bdc92b4b"
+      },
+      "displayOrder" : 2.0,
+      "type" : "MultiSelect",
+      "mandatory" : false
+    }, {
+      "name" : "Validation Error",
+      "uuid" : "7c929abc-c906-4477-9360-e7a4c129b607",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Validation Error",
+        "uuid" : "34904c4c-230f-4872-8e2b-afdab888fc46"
+      },
+      "displayOrder" : 3.0,
+      "type" : "SingleSelect",
+      "rule" : "({params, imports}) => {\n  const individual = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({individual, formElement});\n  const value = individual.getObservationValue(\"Validation Error\");\n  statusBuilder.validationError(\"ABC is not allowed\").whenItem(value === \"ABC\").is.truthy;\n  return statusBuilder.build();\n};",
+      "mandatory" : true
+    } ]
+  }, {
+    "uuid" : "7a6289d2-d891-4e24-aa68-145b09a53932",
+    "name" : "Last FEG",
+    "displayOrder" : 2.0,
+    "display" : "Last FEG",
+    "formElements" : [ {
+      "name" : "First FE of last FEG",
+      "uuid" : "ebdcdc70-7ed9-4481-bea4-44713034ac71",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "First FE of last FEG",
+        "uuid" : "e1f7b0aa-bb2a-482d-b554-8f6ce8eab9b8"
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false,
+      "voided" : true
+    } ],
+    "voided" : true
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "({ params, imports }) => {\n  const individual = params.entity;\n  const scheduleBuilder = new imports.rulesConfig.VisitScheduleBuilder({\n    individual\n  });\n    const shouldSchedule = new imports.rulesConfig.RuleCondition({individual}).valueInRegistration(\"Schedule Visits\").containsAnyAnswerConceptName(\"Encounter1\").matches();\n\n    scheduleBuilder\n    .add({\n      name: \"Encounter1\",\n      encounterType: \"Encounter1\",\n      earliestDate: imports.moment().add(1, \"days\").toDate(),\n      maxDate: imports.moment().add(3, \"days\").toDate()\n    })\n    .whenItem(shouldSchedule)\n    .is.truthy;\n\n  return scheduleBuilder.getAll();\n};",
+  "validationRule" : "",
+  "checklistsRule" : ""
+}

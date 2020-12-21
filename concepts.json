@@ -1,0 +1,195 @@
+[ {
+  "name" : "Encounter1",
+  "uuid" : "97f63df9-bc18-49d3-8818-3c8a8cebed59",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Encounter1 cancellation reason",
+  "uuid" : "c34517ae-1f4f-404e-b2f1-9713ce1595aa",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "reason1",
+    "uuid" : "868f6314-04ef-4983-8796-a3179822dc3c",
+    "order" : 0.0
+  }, {
+    "name" : "reason2",
+    "uuid" : "314a5453-1855-4e5e-ab64-32effbd6c876",
+    "order" : 1.0
+  }, {
+    "name" : "reason3",
+    "uuid" : "ddd3b5bd-c467-456a-bcaf-8d5f71d56b82",
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "First FE of first FEG",
+  "uuid" : "5cecf814-f533-439c-b882-e52f91b5fe56",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Hide last FE of first FEG",
+    "uuid" : "f7e240c6-3236-4016-81c7-90615525335b",
+    "order" : 0.0
+  }, {
+    "name" : "Hide second FEG",
+    "uuid" : "f8a18de3-af73-4ffe-bec6-3b627a6e76ec",
+    "order" : 1.0
+  }, {
+    "name" : "Hide first FE of second FEG",
+    "uuid" : "33995fda-e98f-41d4-b365-e000d50d1ea2",
+    "unique" : true,
+    "order" : 2.0
+  } ]
+}, {
+  "name" : "First FE of last FEG",
+  "uuid" : "e1f7b0aa-bb2a-482d-b554-8f6ce8eab9b8",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "First FE of second FEG",
+  "uuid" : "a31a7ec6-d2a0-4756-806f-dc44646dd233",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Hide all FEs in first FEG",
+  "uuid" : "17a153fe-c448-43c3-b1c7-cfe3551203dc",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hide first FE of first FEG",
+  "uuid" : "c574a81c-b842-4c93-8a11-520d2e520299",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hide first FE of last FEG",
+  "uuid" : "07062982-4587-4e0c-8178-aa274f27b50e",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hide first FE of second FEG",
+  "uuid" : "33995fda-e98f-41d4-b365-e000d50d1ea2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hide first FEG",
+  "uuid" : "e7561711-6255-4fa4-b874-35f95216d5b2",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hide last FE of first FEG",
+  "uuid" : "f7e240c6-3236-4016-81c7-90615525335b",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hide last FE of last FEG",
+  "uuid" : "a46c67a2-d0dd-416b-846f-ac228cee32da",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hide last FE of second FEG",
+  "uuid" : "5c08383c-9a91-4684-ad63-48e2daaca277",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hide last FEG",
+  "uuid" : "0cebcf8e-97ce-4942-9eed-2aed8efcdaf0",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Hide second FEG",
+  "uuid" : "f8a18de3-af73-4ffe-bec6-3b627a6e76ec",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Last FE of first FEG",
+  "uuid" : "93377e4c-6fec-4cfb-ada1-63eec16ba09a",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Last FE of last FEG",
+  "uuid" : "d6975e88-7bdc-4902-b7af-98ae1c9067ab",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Last FE of second FEG",
+  "uuid" : "df360713-57dc-4ed5-82bc-10a1f69a8aed",
+  "dataType" : "Text",
+  "active" : true
+}, {
+  "name" : "Modify encounter1",
+  "uuid" : "b1fc930a-cf49-44f5-a8cd-55a1d1f86659",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Hide first FEG",
+    "uuid" : "e7561711-6255-4fa4-b874-35f95216d5b2",
+    "order" : 0.0
+  }, {
+    "name" : "Hide last FEG",
+    "uuid" : "0cebcf8e-97ce-4942-9eed-2aed8efcdaf0",
+    "order" : 1.0
+  }, {
+    "name" : "Hide second FEG",
+    "uuid" : "f8a18de3-af73-4ffe-bec6-3b627a6e76ec",
+    "order" : 2.0
+  }, {
+    "name" : "Hide first FE of first FEG",
+    "uuid" : "c574a81c-b842-4c93-8a11-520d2e520299",
+    "order" : 3.0
+  }, {
+    "name" : "Hide last FE of last FEG",
+    "uuid" : "a46c67a2-d0dd-416b-846f-ac228cee32da",
+    "order" : 4.0
+  }, {
+    "name" : "Hide all FEs in first FEG",
+    "uuid" : "17a153fe-c448-43c3-b1c7-cfe3551203dc",
+    "order" : 5.0
+  }, {
+    "name" : "Hide last FE of first FEG",
+    "uuid" : "f7e240c6-3236-4016-81c7-90615525335b",
+    "order" : 6.0
+  }, {
+    "name" : "Hide first FE of second FEG",
+    "uuid" : "33995fda-e98f-41d4-b365-e000d50d1ea2",
+    "order" : 7.0
+  }, {
+    "name" : "Hide last FE of second FEG",
+    "uuid" : "5c08383c-9a91-4684-ad63-48e2daaca277",
+    "order" : 8.0
+  }, {
+    "name" : "Hide first FE of last FEG",
+    "uuid" : "07062982-4587-4e0c-8178-aa274f27b50e",
+    "order" : 9.0
+  } ],
+  "keyValues" : [ ]
+}, {
+  "name" : "reason1",
+  "uuid" : "868f6314-04ef-4983-8796-a3179822dc3c",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "reason2",
+  "uuid" : "314a5453-1855-4e5e-ab64-32effbd6c876",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "reason3",
+  "uuid" : "ddd3b5bd-c467-456a-bcaf-8d5f71d56b82",
+  "dataType" : "NA",
+  "active" : true
+}, {
+  "name" : "Schedule Visits",
+  "uuid" : "1b92cf91-30a6-4ff3-902f-4001bdc92b4b",
+  "dataType" : "Coded",
+  "active" : true,
+  "answers" : [ {
+    "name" : "Encounter1",
+    "uuid" : "97f63df9-bc18-49d3-8818-3c8a8cebed59",
+    "order" : 0.0
+  } ]
+}, {
+  "name" : "Validation Error",
+  "uuid" : "34904c4c-230f-4872-8e2b-afdab888fc46",
+  "dataType" : "Text",
+  "active" : true
+} ]

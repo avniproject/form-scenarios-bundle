@@ -1,0 +1,6 @@
+{
+  "name" : "Empty Encounter",
+  "uuid" : "4fdd039f-b596-465f-82c8-0327dc70c657",
+  "formType" : "Encounter",
+  "formElementGroups" : [ ]
+}

@@ -1,0 +1,21 @@
+{
+  "operationalSubjectTypes" : [ {
+    "uuid" : "6e6aaee4-b887-4a23-97aa-f87a3d458579",
+    "subjectType" : {
+      "uuid" : "1cf34749-519b-4bef-afc3-2b6facbeaace"
+    },
+    "name" : "Person"
+  }, {
+    "uuid" : "06bf9a65-0991-4606-aff5-d20f89921c70",
+    "subjectType" : {
+      "uuid" : "fcefba1c-f9cf-489d-9f4f-41f86a6fa4ea"
+    },
+    "name" : "EmptySubject"
+  }, {
+    "uuid" : "14019ccf-2001-4be0-8420-10e21fc52a55",
+    "subjectType" : {
+      "uuid" : "50a5aee8-3592-4101-8ed4-d277145b1e6b"
+    },
+    "name" : "Individual"
+  } ]
+}

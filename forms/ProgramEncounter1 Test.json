@@ -1,0 +1,103 @@
+{
+  "name" : "ProgramEncounter1 Test",
+  "uuid" : "9eed9165-baf4-42f1-af0d-4f807a57142b",
+  "formType" : "ProgramEncounter",
+  "formElementGroups" : [ {
+    "uuid" : "3e56fbde-ce77-48cc-9db5-6f500cd6dbf2",
+    "name" : "First FEG",
+    "displayOrder" : 1.0,
+    "display" : "First FEG",
+    "formElements" : [ {
+      "name" : "First FE of first FEG",
+      "uuid" : "9e38524a-f4fe-4fad-bd63-c727d63bc0a1",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "First FE of first FEG",
+        "uuid" : "5cecf814-f533-439c-b882-e52f91b5fe56"
+      },
+      "displayOrder" : 1.0,
+      "type" : "MultiSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const shouldHide = new imports.rulesConfig.RuleCondition({encounter, formElement}).valueInRegistration(\"Modify encounter1\").containsAnyAnswerConceptName(\"Hide first FE of first FEG\").matches();\n  statusBuilder.show().whenItem(shouldHide).is.not.truthy;\n  const formElementStatus = statusBuilder.build();\n  return formElementStatus;\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Last FE of first FEG",
+      "uuid" : "421fe210-e0ba-4e17-b1ba-806d414f0f3d",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Last FE of first FEG",
+        "uuid" : "93377e4c-6fec-4cfb-ada1-63eec16ba09a"
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const shouldHide = new imports.rulesConfig.RuleCondition({encounter, formElement}).valueInRegistration(\"Modify encounter1\").containsAnyAnswerConceptName(\"Hide last FE of first FEG\").or.valueInEncounter(\"First FE of first FEG\").containsAnyAnswerConceptName(\"Hide last FE of first FEG\").matches()\n  statusBuilder.show().whenItem(shouldHide).is.not.truthy;\n    statusBuilder.validationError(\"123 is invalid\").when.valueInEncounter(\"Last FE of first FEG\").equals(\"123\");\n  const formElementStatus = statusBuilder.build();\n  return formElementStatus;\n};",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const formElementGroup = params.formElementGroup;\n    const shouldHide = new imports.rulesConfig.RuleCondition({encounter, formElementGroup}).valueInRegistration(\"Modify encounter1\").containsAnyAnswerConceptName(\"Hide first FEG\").matches();\n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, !shouldHide, null);\n    });\n};"
+  }, {
+    "uuid" : "c3eaf457-e741-4170-bf64-3fcf4be80df3",
+    "name" : "Second FEG",
+    "displayOrder" : 2.0,
+    "display" : "Second FEG",
+    "formElements" : [ {
+      "name" : "First FE of second FEG",
+      "uuid" : "45c2ab71-318f-496f-965a-473b87d6e9f3",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "First FE of second FEG",
+        "uuid" : "a31a7ec6-d2a0-4756-806f-dc44646dd233"
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const shouldHide = new imports.rulesConfig.RuleCondition({encounter, formElement}).valueInRegistration(\"Modify encounter1\").containsAnyAnswerConceptName(\"Hide first FE of second FEG\").matches();\n  statusBuilder.show().whenItem(shouldHide).is.not.truthy;\n  const formElementStatus = statusBuilder.build();\n  return formElementStatus;\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Last FE of second FEG",
+      "uuid" : "11aa04dc-41fb-4d91-a5cd-259bd2bb44ee",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Last FE of second FEG",
+        "uuid" : "df360713-57dc-4ed5-82bc-10a1f69a8aed"
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const shouldHide = new imports.rulesConfig.RuleCondition({encounter, formElement}).valueInRegistration(\"Modify encounter1\").containsAnyAnswerConceptName(\"Hide last FE of second FEG\").matches();\n  statusBuilder.show().whenItem(shouldHide).is.not.truthy;\n  const formElementStatus = statusBuilder.build();\n  return formElementStatus;\n};",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const formElementGroup = params.formElementGroup;\n    const shouldHide = new imports.rulesConfig.RuleCondition({encounter, formElementGroup}).valueInRegistration(\"Modify encounter1\").containsAnyAnswerConceptName(\"Hide second FEG\").or.valueInEncounter(\"First FE of first FEG\").containsAnyAnswerConceptName(\"Hide second FEG\").matches();\n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, !shouldHide, null);\n    });\n};"
+  }, {
+    "uuid" : "738c0271-9f7f-444b-9a2d-f3e9d309bc5c",
+    "name" : "Last FEG",
+    "displayOrder" : 3.0,
+    "display" : "Last FEG",
+    "formElements" : [ {
+      "name" : "First FE of last FEG",
+      "uuid" : "3300d394-02f8-4ad5-b816-e552ff89c8b0",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "First FE of last FEG",
+        "uuid" : "e1f7b0aa-bb2a-482d-b554-8f6ce8eab9b8"
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const shouldHide = new imports.rulesConfig.RuleCondition({encounter, formElement}).valueInRegistration(\"Modify encounter1\").containsAnyAnswerConceptName(\"Hide first FE of last FEG\").matches();\n  statusBuilder.show().whenItem(shouldHide).is.not.truthy;\n  const formElementStatus = statusBuilder.build();\n  return formElementStatus;\n};",
+      "mandatory" : false
+    }, {
+      "name" : "Last FE of last FEG",
+      "uuid" : "399b6d0a-70c8-4d6c-8219-4755e0822c84",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "Last FE of last FEG",
+        "uuid" : "d6975e88-7bdc-4902-b7af-98ae1c9067ab"
+      },
+      "displayOrder" : 2.0,
+      "type" : "SingleSelect",
+      "rule" : "'use strict';\n({params, imports}) => {\n  const encounter = params.entity;\n  const formElement = params.formElement;\n  const statusBuilder = new imports.rulesConfig.FormElementStatusBuilder({encounter, formElement});\n  const shouldHide = new imports.rulesConfig.RuleCondition({encounter, formElement}).valueInRegistration(\"Modify encounter1\").containsAnyAnswerConceptName(\"Hide last FE of last FEG\").matches();\n  statusBuilder.show().whenItem(shouldHide).is.not.truthy;\n  const formElementStatus = statusBuilder.build();\n  return formElementStatus;\n};",
+      "mandatory" : false
+    } ],
+    "rule" : "'use strict';\n({params, imports}) => {\n    const encounter = params.entity;\n    const formElementGroup = params.formElementGroup;\n    const shouldHide = new imports.rulesConfig.RuleCondition({encounter, formElementGroup}).valueInRegistration(\"Modify encounter1\").containsAnyAnswerConceptName(\"Hide last FEG\").matches();\n    return formElementGroup.formElements.map(({uuid}) => {\n        return new imports.rulesConfig.FormElementStatus(uuid, !shouldHide, null);\n    });\n};"
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : ""
+}

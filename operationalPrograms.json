@@ -1,0 +1,17 @@
+{
+  "operationalPrograms" : [ {
+    "uuid" : "54a8956e-8665-4332-aff5-5069bc188eb6",
+    "program" : {
+      "uuid" : "2f833ff0-3392-49b3-9fff-ed0d5a26fe9e"
+    },
+    "name" : "EmptyProgram",
+    "programSubjectLabel" : ""
+  }, {
+    "uuid" : "b4f79aac-ed31-4897-b157-18d4160556d8",
+    "program" : {
+      "uuid" : "7b67cb52-bdca-4284-a507-6df4ec01dbfb"
+    },
+    "name" : "Program1",
+    "programSubjectLabel" : ""
+  } ]
+}

@@ -1,0 +1,6 @@
+{
+  "name" : "Empty Program Encounter Encounter Cancellation",
+  "uuid" : "7841bdd9-5828-452d-ab4f-31f0b4629dbc",
+  "formType" : "ProgramEncounterCancellation",
+  "formElementGroups" : [ ]
+}

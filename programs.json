@@ -1,0 +1,17 @@
+[ {
+  "name" : "EmptyProgram",
+  "uuid" : "2f833ff0-3392-49b3-9fff-ed0d5a26fe9e",
+  "colour" : "#ff0000",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : "",
+  "enrolmentSummaryRule" : ""
+}, {
+  "name" : "Program1",
+  "uuid" : "7b67cb52-bdca-4284-a507-6df4ec01dbfb",
+  "colour" : "#ff0000",
+  "voided" : false,
+  "active" : null,
+  "enrolmentEligibilityCheckRule" : "",
+  "enrolmentSummaryRule" : ""
+} ]

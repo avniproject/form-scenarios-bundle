@@ -1,0 +1,27 @@
+{
+  "name" : "Program1 Exit",
+  "uuid" : "3aea375b-721f-49b1-903a-3e80909f7000",
+  "formType" : "ProgramExit",
+  "formElementGroups" : [ {
+    "uuid" : "87b04752-20f5-4433-ac80-062781c8295d",
+    "name" : "First FEG",
+    "displayOrder" : 1.0,
+    "display" : "First FEG",
+    "formElements" : [ {
+      "name" : "First FE of first FEG",
+      "uuid" : "ce373488-0d6f-416e-87c7-b057ad339dff",
+      "keyValues" : [ ],
+      "concept" : {
+        "name" : "First FE of first FEG",
+        "uuid" : "5cecf814-f533-439c-b882-e52f91b5fe56"
+      },
+      "displayOrder" : 1.0,
+      "type" : "SingleSelect",
+      "mandatory" : false
+    } ]
+  } ],
+  "decisionRule" : "",
+  "visitScheduleRule" : "",
+  "validationRule" : "",
+  "checklistsRule" : ""
+}

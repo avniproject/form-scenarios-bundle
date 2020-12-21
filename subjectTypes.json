@@ -1,0 +1,28 @@
+[ {
+  "name" : "Individual",
+  "uuid" : "50a5aee8-3592-4101-8ed4-d277145b1e6b",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "",
+  "household" : false,
+  "group" : false,
+  "voided" : false
+}, {
+  "name" : "EmptySubject",
+  "uuid" : "fcefba1c-f9cf-489d-9f4f-41f86a6fa4ea",
+  "active" : true,
+  "type" : "Individual",
+  "subjectSummaryRule" : "",
+  "household" : false,
+  "group" : false,
+  "voided" : false
+}, {
+  "name" : "Person",
+  "uuid" : "1cf34749-519b-4bef-afc3-2b6facbeaace",
+  "active" : true,
+  "type" : "Person",
+  "subjectSummaryRule" : "",
+  "household" : false,
+  "group" : false,
+  "voided" : false
+} ]

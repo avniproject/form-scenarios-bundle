@@ -1,0 +1,6 @@
+{
+  "name" : "Empty Encounter Cancellation",
+  "uuid" : "ca47fdcd-8fd2-4552-a8db-690d61ce5540",
+  "formType" : "IndividualEncounterCancellation",
+  "formElementGroups" : [ ]
+}

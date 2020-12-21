@@ -1,0 +1,21 @@
+[ {
+  "name" : "Empty Program Encounter",
+  "uuid" : "b8bceeee-82bc-4d0c-95bf-293bc8f10d40",
+  "encounterEligibilityCheckRule" : "",
+  "active" : true
+}, {
+  "name" : "ProgramEncounter1",
+  "uuid" : "76fa7405-cfa5-42c9-ac1c-79c6c3650fa5",
+  "encounterEligibilityCheckRule" : "",
+  "active" : true
+}, {
+  "name" : "Empty Encounter",
+  "uuid" : "a3c0adb9-0d32-4251-8ca5-b6278c907b80",
+  "encounterEligibilityCheckRule" : "",
+  "active" : true
+}, {
+  "name" : "Encounter1",
+  "uuid" : "9a209285-bf45-4e11-a945-4f54235c9095",
+  "encounterEligibilityCheckRule" : "",
+  "active" : true
+} ]
